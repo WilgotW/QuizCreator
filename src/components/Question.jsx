@@ -2,8 +2,8 @@ import React from 'react'
 
 const Question = ({questions}) => {
   return questions.map((question, index) => (
-    <div>
-        <p>Question: {questions.length}</p>
+    <div key={index}>
+        <p>Question: {index}</p>
         <input type="text" placeholder='Title'/>
         <input type="text" placeholder='Answer'/>
     </div>

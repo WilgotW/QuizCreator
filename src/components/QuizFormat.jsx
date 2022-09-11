@@ -6,14 +6,13 @@ const QuizFormat = ({quizes}) => {
     const addQuestion = q => {
         const newQuestions = [q, ...questions];
         setQuestions(newQuestions);
-        console.log(newQuestions)
     }
   return quizes.map((quiz, index) => (
-    <div>
-        <p>Quiz Name</p>
-        <input type="text" />
+    <div key={index}>
+        <input type="text" placeholder='Quiz Name' />
         <button onClick={addQuestion}>Add Question</button>
         <Question questions={questions}/>
+        <button>Finish Quiz</button>
     </div>
   ))
 }
